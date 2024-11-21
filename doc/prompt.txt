@@ -1,0 +1,10 @@
+请把pdf中所有的单词都列出来，分析成为json-line格式，每一页是一行数据内容例子如下
+```
+{"fileName":"义务教育教科书·英语（三年级起点）三年级下册_51.pdf","page":7,"index":7,"type":"llm","words":["FL","OME","Recs","aS"]}
+```
+fileName=文件名，page=文件名.pdf前面的数字， type=llm。
+注意，不要中文，不要阿拉伯数字.例如"Unit1" 只需要"Unit"即可
+注意："Let's","Who's","That's", "He's", "She's","That's","David's","Lily's","Alice's","It's"这种缩写的，保持原样。
+注意：,.!?这些句子相关的符号不需要
+注意："Justpractise" 这是两个单词"Just","practise"
+注意:不要出现格式错误，["in","the"] not ["in"the"]

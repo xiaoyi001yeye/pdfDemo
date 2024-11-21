@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+
+    <!-- 定义日志输出的格式 -->
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <!-- 设置根日志记录器的级别为 DEBUG，意味着 DEBUG 及以上级别的日志都会被记录 -->
+    <root level="INFO">
+        <appender-ref ref="STDOUT" />
+    </root>
+
+    <!-- 可以单独为某个包或者类设置特定的日志级别，这里以 com.example 包为例，设置其日志级别为 INFO -->
+    <logger name="com.example" level="INFO" />
+
+</configuration>
